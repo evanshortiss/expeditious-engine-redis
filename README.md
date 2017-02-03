@@ -1,11 +1,10 @@
-expeditious-engine-memory
-=========================
-[![Circle CI](https://circleci.com/gh/evanshortiss/expeditious-engine-memory/tree/master.svg?style=svg)](https://circleci.com/gh/evanshortiss/expeditious-engine-memory/tree/master)
+expeditious-engine-redis
+========================
 
-An in memory engine for expeditious. Cache entries are - you guessed it -
-stored in the node.js process memory. This cache engine will lose everything
-stored if your process restarts, and could lead to memory bloat and slow
-garbage collections if you're not careful with the size and volume of entries!
+![TravisCI](https://travis-ci.org/evanshortiss/expeditious-engine-redis.svg)
+
+An in redis engine for expeditious. Cache entries are - you guessed it -
+stored in a redis instance.
 
 ## Usage
 You can use this module standalone or with expeditious which is the
@@ -13,11 +12,18 @@ recommended approach since it simplifies interactions and allows you to easily
 switch cache engines.
 
 ```js
-var expeditious = require('expeditious');
+const expeditious = require('expeditious');
 
-var countries = expeditious({
+// This will be passed to redis.createClient(options)
+// https://www.npmjs.com/package/redis#rediscreateclient
+const redisOptions = {
+  host: 'redis-server.acme.com',
+  port: 6379
+};
+
+const countries = expeditious({
   // Use the expeditious memory engine
-  engine: require('expeditious-engine-memory')(),
+  engine: require('expeditious-engine-redis')(redisOptions),
   // Prefix all entries with 'countries'
   namespace: 'countries',
   // Auto parse json entries
@@ -59,7 +65,8 @@ Delete a specific item from the cache. Callback receives only an error
 parameter.
 
 #### keys(callback)
-List all keys that this engine instance contains.
+List all keys that this engine instance contains. This can be expensive as per
+the reddit docs for KEYS.
 
 #### ttl(key, callback)
 Get the time left before _key_ expires. Returns _null_ as _res_ if the entry is
