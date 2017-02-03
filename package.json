@@ -19,7 +19,8 @@
   "dependencies": {
     "async": "~2.0.0",
     "expeditious": "~0.1.0",
-    "redis": "~2.6.2"
+    "redis": "~2.6.2",
+    "verror": "~1.9.0"
   },
   "devDependencies": {
     "chai": "~3.5.0",
