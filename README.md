@@ -64,13 +64,13 @@ not found.
 Delete a specific item from the cache. Callback receives only an error
 parameter.
 
-#### keys(callback)
-List all keys that this engine instance contains. This can be expensive as per
-the reddit docs for KEYS.
+#### keys(ns, callback)
+List all keys that this engine instance contains for the given namespace. This
+can be expensive as per the reddit docs for KEYS.
 
 #### ttl(key, callback)
 Get the time left before _key_ expires. Returns _null_ as _res_ if the entry is
 not found.
 
-#### flush(callback)
-Flush all items from the engine instance.
+#### flush(ns, callback)
+Flush all items from the engine instance in the given namespace.
