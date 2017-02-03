@@ -1,0 +1,45 @@
+{
+  "name": "expeditious-engine-redis",
+  "version": "0.1.0",
+  "description": "redis engine for expeditious caches",
+  "main": "expeditious-engine-redis.js",
+  "scripts": {
+    "test": "mocha -R spec test/"
+  },
+  "keywords": [
+    "expeditious",
+    "engine",
+    "cache",
+    "redis",
+    "express-expeditious",
+    "express"
+  ],
+  "author": "Evan Shortiss",
+  "license": "MIT",
+  "dependencies": {
+    "async": "~2.0.0",
+    "expeditious": "~0.1.0",
+    "redis": "~2.6.2"
+  },
+  "devDependencies": {
+    "chai": "~3.5.0",
+    "istanbul": "~0.4.5",
+    "jshint": "~2.9.2",
+    "linelint": "~1.0.0",
+    "mocha": "~2.5.3",
+    "proxyquire": "~1.7.10",
+    "sinon": "~1.17.4"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanshortiss/expeditious-engine-redis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evanshortiss/expeditious-engine-redis/issues"
+  },
+  "homepage": "https://github.com/evanshortiss/expeditious-engine-redis#readme"
+}
