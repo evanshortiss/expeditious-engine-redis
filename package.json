@@ -35,6 +35,9 @@
     "example": "example",
     "test": "test"
   },
+  "engines": {
+    "node": ">=4.4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/evanshortiss/expeditious-engine-redis.git"
