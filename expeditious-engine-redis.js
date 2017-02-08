@@ -12,11 +12,10 @@ module.exports = function (opts) {
   engine._client = client;
 
   engine.set = function setKeyInRedis (key, val, expire, callback) {
-    client.set(
+    client.setex(
       key,
-      val,
-      'EX',
       Math.ceil(expire / 1000),
+      val,
       callback
     );
   };

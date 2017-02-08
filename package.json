@@ -1,6 +1,6 @@
 {
   "name": "expeditious-engine-redis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "redis engine for expeditious caches",
   "main": "expeditious-engine-redis.js",
   "scripts": {
