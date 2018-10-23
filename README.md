@@ -1,6 +1,8 @@
 expeditious-engine-redis
 ========================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/evanshortiss/expeditious-engine-redis.svg)](https://greenkeeper.io/)
+
 ![TravisCI](https://travis-ci.org/evanshortiss/expeditious-engine-redis.svg)
 
 An in redis engine for expeditious. Cache entries are - you guessed it -
