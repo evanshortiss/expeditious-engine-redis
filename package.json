@@ -17,19 +17,19 @@
   "author": "Evan Shortiss",
   "license": "MIT",
   "dependencies": {
-    "async": "~2.0.0",
-    "expeditious": "~0.1.0",
-    "redis": "~2.6.2",
-    "verror": "~1.9.0"
+    "async": "~2.6.1",
+    "expeditious": "~1.0.1",
+    "redis": "~2.8.0",
+    "verror": "~1.10.0"
   },
   "devDependencies": {
-    "chai": "~3.5.0",
+    "chai": "~4.2.0",
     "istanbul": "~0.4.5",
     "jshint": "~2.9.2",
     "linelint": "~1.0.0",
-    "mocha": "~2.5.3",
-    "proxyquire": "~1.7.10",
-    "sinon": "~1.17.4"
+    "mocha": "~5.2.0",
+    "proxyquire": "~2.1.0",
+    "sinon": "~7.0.0"
   },
   "directories": {
     "example": "example",
