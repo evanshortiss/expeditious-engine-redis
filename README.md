@@ -23,7 +23,7 @@ const redisOptions = {
 
 const countries = expeditious({
   // Use the expeditious memory engine
-  engine: require('expeditious-engine-redis')(redisOptions),
+  engine: require('expeditious-engine-redis')({redis: redisOptions}),
   // Prefix all entries with 'countries'
   namespace: 'countries',
   // Auto parse json entries
