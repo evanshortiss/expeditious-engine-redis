@@ -6,7 +6,7 @@ const createRedisClient = require('redis').createClient;
 const ExpeditiousEngine = require('expeditious').ExpeditiousEngine;
 
 module.exports = function (opts) {
-  const client = createRedisClient(opts && opts.redis || {});
+  const client = createRedisClient(opts || {});
   const engine = Object.create(ExpeditiousEngine.prototype);
 
   engine._client = client;
